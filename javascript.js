@@ -43,7 +43,7 @@
         canvas.addEventListener('mousemove',
             function(evt){
                 var mousePos = calculateMousePos(evt);
-                paddle1Y = mousePos.y;
+                paddle1Y = mousePos.y - PADDLE_HEIGHT/2;
             }) 
     }
     function handleMouseClick(evt){
@@ -61,6 +61,7 @@
         ballX = canvas.width/2;
         ballY = canvas.height/2; 
         ballSpeedX = -ballSpeedX;
+        ballSpeedY = 0;
     }
     function computerMovement(){
         var paddle2YCenter = paddle2Y + (PADDLE_HEIGHT/2);
